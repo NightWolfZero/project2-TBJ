@@ -1,0 +1,16 @@
+
+    <h2>Contact page</h2>
+
+<div class="contact-container">
+<form action="/contact">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input ngModel name="firstName" type="text" #firstName="ngModel"  (change)="log('firstName')" id="firstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="comment">comment</label>
+        <textarea ngModel name="comment" #comment="ngModel"  (change)="log('comment')" class="form-control" id="comment" cols="30" rows="10"></textarea>
+    </div>
+    <button class="btn btn-primary">submit</button>
+</form>
+</div>

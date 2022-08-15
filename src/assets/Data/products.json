@@ -1,0 +1,23 @@
+{
+    "product": [
+      {
+      
+        "id": 1,
+        "p_category": "iPhone 9",
+        "p_description": "An apple mobile which is nothing like apple",
+        "p_image": ["...", "...", "..."],
+        "manufacturer": "Apple",
+        "p_name": "iPhone",
+        "price":700,
+        "stock": "arial"
+        
+         
+      }
+      
+    ],
+  
+    "total": 100,
+    "skip": 0,
+    "limit": 30
+  }
+                
