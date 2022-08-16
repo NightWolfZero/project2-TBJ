@@ -6,18 +6,21 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PaymentComponent } from './payment/payment.component';
-import { ProductComponent } from './product/product.component';
-import { ProductsComponent } from './products/products.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
+  { path: 'products/:productId', component: ProductDetailsComponent },
+  { path: '', component: ProductListComponent },
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'payment', component: PaymentComponent},
   { path: 'checkout-form', component: CheckoutFormComponent},
-  { path: 'products', component: ProductsComponent},
-  { path: 'product/:id', component: ProductComponent},
+  { path: 'Product-list', component: ProductListComponent},
+  { path: 'top-bar', component: TopBarComponent},
   { path: '**', redirectTo: 'home'}
 ];
 

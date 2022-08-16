@@ -1,0 +1,143 @@
+<!-- 
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" routerLink="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  </head>
+  <body>
+
+
+  
+    <div class="top-bar">
+      <div class="row">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">BTJ2 Store</li>
+            <li class="has-submenu">
+              <a routerLink="/checkout-form">Checkout</a>
+              <ul class="submenu menu vertical" data-submenu>
+                <li><a routerLink="/payment">Payment</a></li>
+                <li><a routerLink="/order">orders</a></li>
+                <li><a routerLink="/product">product</a></li>
+                
+              </ul>
+            </li>
+            <li><a routerLink="/payment">payment</a></li>
+            <li><a routerLink="/contact">contact</a></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><input type="search" placeholder="Search"></li>
+            <li><button type="button" class="button">Search</button></li>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="menu">
+            <li><a routerLink="/checkout-form" class="button fancy-button"><i class="material-icons">shopping_cart</i>Checkout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <br>
+    
+    <div class="row columns">
+      <nav aria-label="You are here:" role="navigation">
+        <ul class="breadcrumbs">
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="#">Features</a></li>
+         
+         
+        </ul>
+      </nav>
+    </div>
+   
+    <div class="row small-up-2 large-up-4">
+      <div class="column">
+        <img class="thumbnail" src="./assets/image/oscar-nord-8l9VxXI28tY-unsplash.jpg" width="150" height="270">
+        <h5></h5>
+        <p>$350</p>
+        <a href="/checkout-form" class="button expanded">Buy</a>
+      </div>
+      <div class="column">
+        <img class="thumbnail" src="./assets/image/paolo-giubilato-ZwKCWVFdrcs-unsplash.jpg" width="150" height="270">
+        <h5></h5>
+        <p>$300</p>
+        <a href="/checkout-form" class="button expanded">Buy</a>
+      </div>
+      <div class="column">
+        <img class="thumbnail" src="./assets/image/rahul-chakraborty-xsGxhtAsfSA-unsplash.jpg" width="150" height="270">
+        <h5></h5>
+        <p>$400</p>
+        <a href="/checkout-form" class="button expanded" (click)="addItem()">Buy</a>
+      </div>
+      <div class="column">
+        <img class="thumbnail" src="./assets/image/rishabh-malhotra-83ypHTv6J2M-unsplash.jpg" width="150" height="270">
+        <h5></h5>
+        <p>$500</p>
+        <a href="/checkout-form" class="button expanded">Buy</a>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row column">
+      <div class="callout primary">
+        <h3></h3>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row column text-center">
+      <h2>Some Other Products</h2>
+      <hr>
+      
+    </div>
+
+    
+
+    
+
+   
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+
+
+
+
+ -->
+ <h2>Products</h2>
+
+<div *ngFor="let product of product">
+
+<h3>
+  <a [title]="product.name + ' details'"
+  [routerLink]="['/products', product.id]">
+    {{ product.name }}
+  </a>
+</h3>
+<p *ngIf="product.description">
+  Description: {{ product.description }}
+</p>
+<button type="button" (click)="share()">
+  Share
+</button>
+  <!-- . . . -->
+  <app-product-alerts>
+  [product]="product"
+  (notify)="onNotify()">
+</app-product-alerts>
+</div>

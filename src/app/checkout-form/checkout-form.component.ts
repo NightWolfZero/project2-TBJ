@@ -8,6 +8,7 @@ declare var AddressFinder: any;
   styleUrls: ["./checkout-form.component.scss"]
 })
 export class CheckoutFormComponent implements OnInit {
+  
   ngOnInit() {
     let script = document.createElement("script");
     script.src = "https://api.addressfinder.io/assets/v3/widget.js";
