@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     console.log("Trying to update database...");
     setTimeout(() => {
       console.log("Database is updated");
-      this.router.navigate(['products']);
+      this.router.navigate(['product-list']);
     }, 2000);
   }
   goToCheckoutForm() {
