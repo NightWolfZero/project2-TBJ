@@ -18,6 +18,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  register(){
+    this.router.navigate(["/register"]);
+  }
+
   login() {
     if (this.username.trim().length === 0) {
       this.errorMsg = "Username is required";

@@ -13,7 +13,7 @@ export class ProductListComponent {
   product = products;
 
   share(): void {
-    window.alert('The product has been shared!');
+    window.alert('The product has been added to cart!');
   }
   addItem(): void{
     window.alert('The product has been added!');
