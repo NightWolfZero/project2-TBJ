@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
+import { Customer } from '../models/Customer';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -8,10 +10,20 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  username = "";
-  password = "";
+  public username!: string;
+  public password!: string;
   errorMsg = "";
+  baseUrl = environment.apiBaseUrl;
+  public currentUser: Customer = {
+    uname: '',
+    pword: '',
+    id: 0,
+    email: '',
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    address: ''
+  };
 
   constructor(private auth: AuthService, private router: Router) { }
 

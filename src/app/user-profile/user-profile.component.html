@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>Update Profile</h1>
+        <p><a href="home">home >></a> Update</p>
+      </div>
+      <div>
+        <form class="login-form">
+          <h3>Update!</h3>
+          <div style="display: flex" class="form-nam">
+            <label for="name">Name</label><br/>
+            <input
+            style="margin-left: 7.8em"
+            type="text"
+            name="first_name"
+            id="name1"
+            placeholder="First Name"
+            required
+            [(ngModel)]="cust.firstname"
+          /><br />
+          <input
+            style="margin-left: 5em"
+            type="text"
+            name="last_name"
+            id="name2"
+            placeholder="Last Name"
+            required
+            [(ngModel)]="cust.lastname"
+          />
+        </div>
+        <div class="formbasic" style="display: flex">
+            <label for="username"> Enter New Username</label>
+            <input
+              style="margin-left: 0.5em"
+              type="text"
+              name="username"
+              placeholder="username"
+              id="name3"
+              required
+              [(ngModel)]="cust.username"
+            />
+          </div>
+          <div class="formbasic" style="display: flex">
+            <label for="password">Enter Password</label>
+            <input
+              style="margin-left: 3.3em"
+              type="text"
+              name="password"
+              placeholder="password"
+              id="name4"
+              [(ngModel)]="cust.password"
+              required
+            />
+          </div>
+
+      <div class="formbasic" style="display: flex">
+          <label for="phoneno">Enter Phone</label>
+          <input
+            style="margin-left: 5em"
+            type="text"
+            placeholder="phone"
+            name="phoneno"
+            id="name5"
+            [(ngModel)]="cust.phoneno"
+            required
+          />
+        </div>
+
+        <div class="formbasic" style="display: flex">
+          <label for="st_address">Enter Street Address</label>
+          <input
+            placeholder="address"
+            style="margin-left: 0.8em"
+            type="text"
+            name="st_address"
+            id="name6"
+            [(ngModel)]="cust.address"
+          />
+        </div>
+
+        <div class="btn-block">
+          <button
+            type="submit"
+            style="margin-left: 20em"
+            class="btn"
+            (click)="submitUpdate()"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

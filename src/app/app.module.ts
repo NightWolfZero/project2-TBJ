@@ -1,6 +1,7 @@
 import { PaymentComponent } from './payment/payment.component';
 import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { OrderComponent } from './order/order/order.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +33,16 @@ import { OrderComponent } from './order/order/order.component';
     TopBarComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
-    OrderComponent
+    OrderComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    NgbModule,
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
