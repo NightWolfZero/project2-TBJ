@@ -5,9 +5,11 @@ import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { OrderComponent } from './order/order/order.component';
 import { PaymentComponent } from './payment/payment.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { RegisterComponent } from './register/register.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 
 const routes: Routes = [
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'payment', component: PaymentComponent},
+  { path: 'order', component: OrderComponent},
+  {path: 'register', component: RegisterComponent},
   { path: 'checkout-form', component: CheckoutFormComponent},
   { path: 'Product-list', component: ProductListComponent},
   { path: 'top-bar', component: TopBarComponent},
